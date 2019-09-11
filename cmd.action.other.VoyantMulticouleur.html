@@ -1,7 +1,7 @@
 <div style="min-width:80px;min-height:25px;" class="cmd" data-type="action" data-subtype="other" data-cmd_id="#id#" data-cmd_uid="#uid#" data-eqLogic_id="#eqLogic_id#" data-eqLogic_id="#eqLogic_id#" title="#collectDate#">
     <!-- Info Widget
         Basé sur les widget de 	: 
-        Mise à jour				: JAG 20190907 : Normalisation nom images => Merci à mich0111
+        Mise à jour				: JAG 20190911 : Normalisation nom images => Merci à mich0111
 	-->
     <span style="float:left;" class="title #hide_name#">
         <span class="cmdName" style="#hideCmdName#">#valueName#</span>
@@ -40,21 +40,21 @@
                 };
     			
 			// Paramétrage des images
-						var srcImgURL_M       = 'plugins/widget/core/template/mobile/cmd.action.other.VoyantMulticouleur/';
+						var srcImgURL_M       = 'plugins/widget/core/template/dashboard/cmd.action.other.Multi-action-Defaut/voyant/';
 
 		if (_options.display_value == '1' || _options.display_value == 1 || _options.display_value == '99' || _options.display_value == 99 || _options.display_value == 'on') {
 			if (jeedom.cmd.normalizeName('#name#') == 'on') {
 				$('.cmd[data-cmd_id=#id#]').hide();
 			}else{
 				$('.cmd[data-cmd_id=#id#]').show();
-				$('.cmd[data-cmd_id=#id#] .iconCmd#id#').empty().append('<img src="'+srcImgURL_M +srcImgFormON_M +'_'+srcImgColorON_M +'.'+ srcImglogoON_M_T+'">');
+				$('.cmd[data-cmd_id=#id#] .iconCmd#id#').empty().append('<img src="'+srcImgURL_M +'vo_' +srcImgFormON_M +'_'+srcImgColorON_M +'.'+ srcImglogoON_M_T+'">');
 			}
 		} else {
 			if (jeedom.cmd.normalizeName('#name#') == 'off') {
 				$('.cmd[data-cmd_id=#id#]').hide();
 			}else{
 				$('.cmd[data-cmd_id=#id#]').show();
-				$('.cmd[data-cmd_id=#id#] .iconCmd#id#').empty().append('<img src="'+srcImgURL_M +srcImgFormOFF_M +'_'+srcImgColorOFF_M +'.'+ srcImglogoOFF_M_T+'">');
+				$('.cmd[data-cmd_id=#id#] .iconCmd#id#').empty().append('<img src="'+srcImgURL_M +'vo_' +srcImgFormOFF_M +'_'+srcImgColorOFF_M +'.'+ srcImglogoOFF_M_T+'">');
 			}
 		}
 	}
